@@ -1,32 +1,27 @@
+from python.util import settings
 import pygame
 
-#Quick access to basic keys that will be used
+# the main file needs to handle window creation and gamestate management.
+# This file needs to ensure that all communication between the user and
+# the game and inter-game communications have a means of occurring.
+
+# Quick access to basic keys that will be used
 from pygame.locals import(
-    K_UP,
-    K_DOWN,
-    K_LEFT,
-    K_RIGHT,
     K_ESCAPE,
     KEYDOWN,
     QUIT
 )
 
-# the main loop needs to handle window creation and gamestate.
+# initialize pygame
 pygame.init()
 
-# open a window here
-    #Constants
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
-
-    #Create screen object and fill it with white background
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-screen.fill((255,255,255))
-
+# open a blank screen
+screen = pygame.display.set_mode((settings.SCREEN_WIDTH, settings.SCREEN_HEIGHT))
+screen.fill((255, 255, 255))
 
 # audio logic
 
-# main render loop (I'll help here)
+# main render loop
 running = True
 while running:
     for event in pygame.event.get():
@@ -35,7 +30,6 @@ while running:
                 running = False
         elif event.type == QUIT:
             running = False
-    
-    pygame.display.flip()
 
-# I'm not sure how to handle user input yet, but that's a later issue
+    # blit the new things to the screen
+    pygame.display.flip()
