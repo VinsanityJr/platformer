@@ -1,5 +1,8 @@
-#Quick access to basic keys that will be used
+# This module contains basic variables that will be used throughout
+# the program
 
-#Constants
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+# Are we exiting the program?
+exit_program = False
+
+# Screen size
+SCREEN_SIZE = (800, 600)
