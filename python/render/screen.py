@@ -8,4 +8,5 @@ class Screen:
 
     # Render all the drawable items in this screen
     def render(self):
-        pass
+        for drawable in self.drawables:
+            drawable.render()
