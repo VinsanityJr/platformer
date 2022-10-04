@@ -8,8 +8,9 @@ import pygame
 # This file needs to ensure that all communication between the user and
 # the game and inter-game communications have a means of occurring.
 
-# initialize pygame
+# initialize pygame and its text engine
 pygame.init()
+settings.default_font = pygame.font.SysFont('Comic Sans MS', 30)  # freetype is apparently better than font
 
 # open a blank surface
 surface = pygame.display.set_mode(settings.SURFACE_SIZE)

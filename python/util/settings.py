@@ -7,4 +7,5 @@ gamestate = "menu"
 
 # screen variables
 SURFACE_SIZE = (800, 600)
+default_font = None
 screen = None

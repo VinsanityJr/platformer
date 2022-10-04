@@ -7,6 +7,8 @@ import pygame
 class Rectangle(drawable.Drawable):
     def __init__(self, color, pos, dim):
         super().__init__()
+
+        # initialize values
         self.color = color
         self.shape = pygame.Rect(pos, dim)
 
