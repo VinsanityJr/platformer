@@ -3,6 +3,8 @@
 # it. Drawables should not be used in the platformer.
 
 class Drawable:
+    surface = None
+
     def __init__(self):
         pass
 

@@ -1,8 +1,10 @@
 # This module contains basic variables that will be used throughout
-# the program
+# the program. It is not limited to "settings" in the traditional sense.
 
-# Are we exiting the program?
+# Gamestate variables
 exit_program = False
+gamestate = "menu"
 
-# Screen size
-SCREEN_SIZE = (800, 600)
+# screen variables
+SURFACE_SIZE = (800, 600)
+screen = None

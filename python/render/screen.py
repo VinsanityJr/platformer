@@ -6,6 +6,9 @@ class Screen:
     def __init__(self):
         self.drawables = []
 
+    def add_drawable(self, drawable):
+        self.drawables.append(drawable)
+
     # Render all the drawable items in this screen
     def render(self):
         for drawable in self.drawables:
