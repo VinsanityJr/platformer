@@ -1,4 +1,5 @@
 from python.util import settings
+from python.util import colors
 from python.util import event_helper as ev
 from python.render.drawables import drawable
 from python.render import screens
@@ -14,7 +15,7 @@ settings.default_font = pygame.font.SysFont('Comic Sans MS', 30)  # freetype is 
 
 # open a blank surface
 surface = pygame.display.set_mode(settings.SURFACE_SIZE)
-surface.fill((255, 255, 255))  # eventually remove this line
+surface.fill(colors.WHITE)  # eventually remove this
 
 # set the surface that everything is going to be drawn to.
 drawable.Drawable.surface = surface
