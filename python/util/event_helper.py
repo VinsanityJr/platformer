@@ -49,7 +49,7 @@ def pet_event_helper():
         settings.exit_program = True
 
 
-# clear all keys in the event dictionary
+# clear all keys in the event dictionary. Do not call in code.
 def clear_event_helper():
     for key in key_events:
         key_events[key] = ""

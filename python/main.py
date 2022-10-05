@@ -23,7 +23,7 @@ drawable.Drawable.surface = surface
 # set the default screen to the main menu
 settings.screen = screens.main_menu_screen
 
-# main render loop
+# main loop
 while not settings.exit_program:
     # pet the event helper
     ev.pet_event_helper()

@@ -6,7 +6,7 @@ from python.util import settings
 
 
 class Textbox(drawable.Drawable):
-    def __init__(self, pos, color, text, font=None):
+    def __init__(self, color, pos, text, font=None):
         super().__init__()
 
         # initialize the drawable's values
