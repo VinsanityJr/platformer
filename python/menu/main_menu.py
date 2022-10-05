@@ -17,3 +17,4 @@ class Main_Menu(screen.Screen):
         super().add_drawable(shapes.Rectangle(colors.BLACK, (160, 160), (50, 50)))
         super().add_drawable(textbox.Textbox((200, 100), colors.BLACK, "Welcome to our game!"))
         super().add_drawable(textbox.Textbox((300, 250), colors.BLACK, "It's a pretty cool game."))
+        super().add_drawable(textbox.Textbox((280, 470), colors.BLACK, "You should play it"))

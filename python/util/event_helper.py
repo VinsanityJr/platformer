@@ -58,3 +58,8 @@ def clear_event_helper():
 # poll the dictionary for a given key
 def get_key_state(key):
     return key_events[key]
+
+
+# ask pygame what the current mouse position is
+def get_mouse_pos():
+    return pygame.mouse.get_pos()
