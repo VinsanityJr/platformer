@@ -2,7 +2,7 @@ from python.util import settings
 from python.util import colors
 from python.util import event_helper as ev
 from python.render.drawables import drawable
-from python.render import screens
+from python.menu import screens
 import pygame
 
 # the main file needs to handle window creation and gamestate management.
