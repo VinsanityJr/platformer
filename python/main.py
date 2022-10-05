@@ -31,5 +31,7 @@ while not settings.exit_program:
     if settings.gamestate == "menu":
         settings.screen.render()
 
+    settings.screen.on_click(ev.get_mouse_pos())
+
     # blit the new things to the screen
     pygame.display.flip()
