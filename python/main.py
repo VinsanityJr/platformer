@@ -27,11 +27,10 @@ settings.screen = screens.main_menu_screen
 while not settings.exit_program:
     # pet the event helper
     ev.pet_event_helper()
+    ev.slap_event_helper()
 
     if settings.gamestate == "menu":
         settings.screen.render()
-
-    settings.screen.on_click(ev.get_mouse_pos())
 
     # blit the new things to the screen
     pygame.display.flip()

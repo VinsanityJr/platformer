@@ -3,6 +3,7 @@
 
 # Gamestate Variables
 exit_program = False
+is_mouse_click = False
 gamestate = "menu"
 
 # Screen Variables

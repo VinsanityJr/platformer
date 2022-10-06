@@ -40,6 +40,12 @@ def pet_event_helper():
             if event.key in key_events:
                 key_events[event.key] = "up"
 
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            settings.is_mouse_click = True
+
+        elif event.type == pygame.MOUSEBUTTONUP:
+            settings.is_mouse_click = False
+
         # if the user hit the 'x' button, exit the program
         elif event.type == pygame.QUIT:
             settings.exit_program = True
@@ -47,6 +53,13 @@ def pet_event_helper():
     # if the escape key was pressed, exit the program
     if key_events[ESCAPE] != "":
         settings.exit_program = True
+
+
+# slap the event helper! Handle mouseclick calls during menu gameplay.
+def slap_event_helper():
+    if settings.is_mouse_click:
+        settings.screen.on_click(get_mouse_pos())
+        settings.is_mouse_click = False
 
 
 # clear all keys in the event dictionary. Do not call in code.
