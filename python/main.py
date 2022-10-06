@@ -15,7 +15,6 @@ settings.default_font = pygame.font.SysFont('Comic Sans MS', 30)  # freetype is 
 
 # open a blank surface
 surface = pygame.display.set_mode(settings.SURFACE_SIZE)
-surface.fill(colors.WHITE)  # eventually remove this
 
 # set the surface that everything is going to be drawn to.
 drawable.Drawable.surface = surface
@@ -25,10 +24,12 @@ settings.screen = screens.main_menu_screen
 
 # main loop
 while not settings.exit_program:
-    # pet the event helper
+    # pet and slap the event helper
     ev.pet_event_helper()
     ev.slap_event_helper()
 
+    # render the screen
+    surface.fill(colors.WHITE)
     if settings.gamestate == "menu":
         settings.screen.render()
 

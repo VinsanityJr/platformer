@@ -1,8 +1,10 @@
+from python.menu import screens
 from python.render import screen
 from python.render.drawables import shapes
 from python.render.drawables import textbox
 from python.render.drawables import button
 from python.util import colors
+from python.util import settings
 
 # This module contains the main menu class. This class contains the screen
 # that contains all the drawables as well as any other code that might be
@@ -19,7 +21,7 @@ class Main_Menu(screen.Screen):
         super().add_drawable(textbox.Textbox(colors.BLACK, (200, 100), "Welcome to our game!"))
         super().add_drawable(textbox.Textbox(colors.BLACK, (300, 250), "It's a pretty cool game."))
         super().add_drawable(textbox.Textbox(colors.BLACK, (280, 470), "You should play it"))
-        super().add_drawable(button.Button(colors.BLACK, (10, 200), (30, 30), self.play))
+        super().add_drawable(button.Button(colors.BLACK, (10, 200), (30, 30), self.to_village_square))
 
-    def play(self):
-        print("Time to play the game!")
+    def to_village_square(self):
+        settings.screen = screens.village_square_screen

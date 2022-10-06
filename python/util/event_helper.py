@@ -57,7 +57,7 @@ def pet_event_helper():
 
 # slap the event helper! Handle mouseclick calls during menu gameplay.
 def slap_event_helper():
-    if settings.is_mouse_click:
+    if settings.is_mouse_click and settings.gamestate == "menu":
         settings.screen.on_click(get_mouse_pos())
         settings.is_mouse_click = False
 
